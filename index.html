@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aditya Chore - AI Engineer Portfolio showcasing projects in Machine Learning, Backend Engineering, and Data Analysis">
+    <title>Aditya Chore | AI Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header with Navigation -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="logo-svg">
+                    <circle cx="20" cy="20" r="18" stroke="url(#gradient1)" stroke-width="2" />
+                    <path d="M20 8L28 20L20 32L12 20L20 8Z" fill="url(#gradient2)" />
+                    <defs>
+                        <linearGradient id="gradient1" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#a855f7" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                        <linearGradient id="gradient2" x1="12" y1="8" x2="28" y2="32">
+                            <stop offset="0%" stop-color="#06b6d4" />
+                            <stop offset="50%" stop-color="#a855f7" />
+                            <stop offset="100%" stop-color="#ec4899" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <span class="logo-text">ADI</span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section with 3D Canvas -->
+    <section class="hero" id="home">
+        <canvas id="three-canvas" class="three-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text animate-fade-in">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Hello! I'm</span><br>
+                    <span class="hero-title-main">Aditya Chore</span>
+                </h1>
+                <p class="hero-description">
+                    Artificial Intelligence Engineer | Building intelligent systems and turning complex data into
+                    practical, real-world solutions
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+
+            <!-- Animated SVG Graphics -->
+            <div class="svg-graphics">
+                <svg class="floating-shape shape-1" width="100" height="100" viewBox="0 0 100 100">
+                    <polygon points="50,10 90,35 75,75 25,75 10,35" fill="url(#shapeGradient1)" opacity="0.6" />
+                    <defs>
+                        <linearGradient id="shapeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#a855f7" />
+                            <stop offset="100%" stop-color="#06b6d4" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <svg class="floating-shape shape-2" width="80" height="80" viewBox="0 0 80 80">
+                    <circle cx="40" cy="40" r="35" fill="none" stroke="url(#shapeGradient2)" stroke-width="2" />
+                    <circle cx="40" cy="40" r="20" fill="url(#shapeGradient2)" opacity="0.4" />
+                    <defs>
+                        <linearGradient id="shapeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ec4899" />
+                            <stop offset="100%" stop-color="#a855f7" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <svg class="floating-shape shape-3" width="120" height="120" viewBox="0 0 120 120">
+                    <rect x="20" y="20" width="80" height="80" fill="none" stroke="url(#shapeGradient3)"
+                        stroke-width="2" transform="rotate(45 60 60)" />
+                    <defs>
+                        <linearGradient id="shapeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#06b6d4" />
+                            <stop offset="100%" stop-color="#ec4899" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">About Me</h2>
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <p class="about-intro">
+                        I'm a motivated AI student passionate about understanding complex systems from the ground up. I
+                        bridge the gap between high-level theory and practical, real-world application, building
+                        intelligent solutions that make everyday life smarter.
+                    </p>
+
+                    <!-- Dashboard Stats -->
+                    <div class="dashboard-stats">
+                        <div class="stat-card glass-card">
+                            <div class="stat-number" data-target="10">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-card glass-card">
+                            <div class="stat-number" data-target="9">0</div>
+                            <div class="stat-label">Tech Skills</div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Progress Circles -->
+                    <div class="skills-progress">
+                        <h3 class="skills-title">Technical Skills</h3>
+                        <div class="skills-circles-grid">
+                            <!-- Skill Circle 1 -->
+                            <div class="skill-circle-item">
+                                <div class="circle-wrap">
+                                    <svg class="progress-ring" width="120" height="120">
+                                        <circle class="progress-ring-bg" stroke="rgba(168, 85, 247, 0.1)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60" />
+                                        <circle class="progress-ring-circle" stroke="url(#gradient-purple)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60"
+                                            data-progress="90" />
+                                        <defs>
+                                            <linearGradient id="gradient-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#a855f7" />
+                                                <stop offset="100%" stop-color="#ec4899" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <div class="circle-percentage" data-progress="90">0%</div>
+                                </div>
+                                <p class="skill-label">Python & AI/ML</p>
+                            </div>
+
+                            <!-- Skill Circle 2 -->
+                            <div class="skill-circle-item">
+                                <div class="circle-wrap">
+                                    <svg class="progress-ring" width="120" height="120">
+                                        <circle class="progress-ring-bg" stroke="rgba(6, 182, 212, 0.1)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60" />
+                                        <circle class="progress-ring-circle" stroke="url(#gradient-cyan)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60"
+                                            data-progress="85" />
+                                        <defs>
+                                            <linearGradient id="gradient-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#06b6d4" />
+                                                <stop offset="100%" stop-color="#a855f7" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <div class="circle-percentage" data-progress="85">0%</div>
+                                </div>
+                                <p class="skill-label">Backend Engineering</p>
+                            </div>
+
+                            <!-- Skill Circle 3 -->
+                            <div class="skill-circle-item">
+                                <div class="circle-wrap">
+                                    <svg class="progress-ring" width="120" height="120">
+                                        <circle class="progress-ring-bg" stroke="rgba(236, 72, 153, 0.1)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60" />
+                                        <circle class="progress-ring-circle" stroke="url(#gradient-pink)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60"
+                                            data-progress="82" />
+                                        <defs>
+                                            <linearGradient id="gradient-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#ec4899" />
+                                                <stop offset="100%" stop-color="#06b6d4" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <div class="circle-percentage" data-progress="82">0%</div>
+                                </div>
+                                <p class="skill-label">Database Management</p>
+                            </div>
+
+                            <!-- Skill Circle 4 -->
+                            <div class="skill-circle-item">
+                                <div class="circle-wrap">
+                                    <svg class="progress-ring" width="120" height="120">
+                                        <circle class="progress-ring-bg" stroke="rgba(168, 85, 247, 0.1)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60" />
+                                        <circle class="progress-ring-circle" stroke="url(#gradient-mixed)"
+                                            stroke-width="8" fill="transparent" r="52" cx="60" cy="60"
+                                            data-progress="88" />
+                                        <defs>
+                                            <linearGradient id="gradient-mixed" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#06b6d4" />
+                                                <stop offset="50%" stop-color="#a855f7" />
+                                                <stop offset="100%" stop-color="#ec4899" />
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <div class="circle-percentage" data-progress="88">0%</div>
+                                </div>
+                                <p class="skill-label">Data Analysis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills-grid">
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">🤖</div>
+                            <h3>AI & Machine Learning</h3>
+                            <p>Building and training models for prediction and analysis, focusing on linear/logistic
+                                regression</p>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">⚙️</div>
+                            <h3>Backend Engineering</h3>
+                            <p>Building robust backend systems using Kafka, NoSQL databases, and REST APIs</p>
+                        </div>
+                        <div class="skill-card glass-card">
+                            <div class="skill-icon">📊</div>
+                            <h3>Data Analysis</h3>
+                            <p>Finding patterns in data and developing real-time tracking platforms</p>
+                        </div>
+                    </div>
+
+                    <!-- Certifications Section -->
+                    <div class="certifications-section animate-on-scroll">
+                        <h3 class="certifications-title">My Certifications</h3>
+                        <div class="certifications-grid">
+                            <!-- Certification Card 1 -->
+                            <div class="certification-card">
+                                <div class="certification-inner">
+                                    <div class="certification-front glass-card">
+                                        <div class="cert-icon">📜</div>
+                                        <h4>Communication Skills</h4>
+                                        <p class="cert-issuer">Professional Development</p>
+                                        <span class="flip-hint">Hover to view details</span>
+                                    </div>
+                                    <div class="certification-back glass-card">
+                                        <img src="assets/cert-communication.jpg" alt="Communication Skills Certificate"
+                                            class="cert-image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification Card 2 -->
+                            <div class="certification-card">
+                                <div class="certification-inner">
+                                    <div class="certification-front glass-card">
+                                        <div class="cert-icon">🎓</div>
+                                        <h4>Professional Skills</h4>
+                                        <p class="cert-issuer">Career Development</p>
+                                        <span class="flip-hint">Hover to view details</span>
+                                    </div>
+                                    <div class="certification-back glass-card">
+                                        <img src="assets/cert-professional.jpg" alt="Professional Skills Certificate"
+                                            class="cert-image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification Card 3 -->
+                            <div class="certification-card">
+                                <div class="certification-inner">
+                                    <div class="certification-front glass-card">
+                                        <div class="cert-icon">💼</div>
+                                        <h4>JPMorgan Software Engineering</h4>
+                                        <p class="cert-issuer">Forage Simulation</p>
+                                        <span class="flip-hint">Hover to view details</span>
+                                    </div>
+                                    <div class="certification-back glass-card">
+                                        <img src="assets/cert-jpmorgan.png"
+                                            alt="JPMorgan Software Engineering Certificate" class="cert-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallax Scrolling Section -->
+    <section class="parallax-section" id="parallax-showcase">
+        <div class="parallax-container">
+            <!-- Background Layer (moves slowest) -->
+            <div class="parallax-layer parallax-bg" data-speed="0.3">
+                <div class="parallax-sky"></div>
+            </div>
+
+            <!-- Sun Layer (moves medium speed) -->
+            <div class="parallax-layer parallax-sun" data-speed="0.5">
+                <div class="sun-glow"></div>
+            </div>
+
+            <!-- Water Horizon -->
+            <div class="parallax-layer parallax-water" data-speed="0.6">
+                <div class="water-line"></div>
+            </div>
+
+            <!-- Foreground Layer - Jellyfish (moves fastest) -->
+            <div class="parallax-layer parallax-fg" data-speed="0.8">
+                <div class="jellyfish-container"></div>
+            </div>
+
+            <!-- Content Overlay -->
+            <div class="parallax-content">
+                <h2 class="parallax-title gradient-text">Immersive Experiences</h2>
+                <p class="parallax-subtitle">Scroll to explore the depth</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio-section" id="portfolio">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Featured Projects</h2>
+            <div class="portfolio-grid">
+                <article class="portfolio-item glass-card animate-on-scroll">
+                    <div class="portfolio-image">
+                        <img src="assets/project-1.jpg" alt="Hello Sakhi">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Hello Sakhi – Women Safety System</h3>
+                        <p>AI-based safety guidance platform with incident reporting, instant safety queries, and
+                            emergency SOS with real-time location sharing</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">NLP Chatbot</span>
+                            <span class="tag">Real-Time</span>
+                            <span class="tag">Social Impact</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item glass-card animate-on-scroll">
+                    <div class="portfolio-image">
+                        <img src="assets/project-2.jpg" alt="AI Bus Tracking">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>AI Bus Tracking Platform</h3>
+                        <p>Real-time transportation platform with GPS tracking, route updates, and data analysis to
+                            improve urban mobility</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">GPS</span>
+                            <span class="tag">NoSQL</span>
+                            <span class="tag">Real-Time</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="portfolio-item glass-card animate-on-scroll">
+                    <div class="portfolio-image">
+                        <img src="assets/project-3.jpg" alt="MedichaT">
+                        <div class="portfolio-overlay">
+                            <span class="view-project">View Project →</span>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>MedichaT – Smart Healthcare Assistant</h3>
+                        <p>AI-driven healthcare app using OCR and Gemini API to analyze prescriptions, suggest
+                            medicines, and create diet plans</p>
+                        <div class="portfolio-tags">
+                            <span class="tag">Gemini API</span>
+                            <span class="tag">OCR</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Healthcare AI</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-text animate-on-scroll">
+                    <p class="contact-intro">
+                        Have a project in mind or just want to chat? I'd love to hear from you!
+                    </p>
+                    <div class="contact-methods">
+                        <a href="mailto:adityachore9284@gmail.com" class="contact-method glass-card">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>adityachore9284@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/aditya-chore-a81122330" target="_blank"
+                            class="contact-method glass-card">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <p>Connect with me</p>
+                            </div>
+                        </a>
+                        <a href="tel:+919322174565" class="contact-method glass-card">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <p>+91 93221 74565</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form glass-card animate-on-scroll" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aditya Chore. Crafted with passion and code.</p>
+            <div class="social-links">
+                <a href="https://x.com/ChoreAditya9284" target="_blank" aria-label="Twitter">𝕏</a>
+                <a href="https://www.linkedin.com/in/aditya-chore-a81122330" target="_blank"
+                    aria-label="LinkedIn">in</a>
+                <a href="https://www.instagram.com/the_aditya_c7" target="_blank" aria-label="Instagram">ig</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="scene.js"></script>
+    <script src="animations.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
