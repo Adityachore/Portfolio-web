@@ -6,7 +6,7 @@
         nodes: {
             count: 80,
             sizes: { small: 3, medium: 5, large: 9, xlarge: 14 },
-            glowIntensity: 2.8,
+            glowIntensity: 4.5,  // Increased brightness
             pulseSpeed: 0.6,
             colors: { cyan: 0x00d9ff, purple: 0xb537f2, pink: 0xff0080, orange: 0xff6b35, green: 0x00ff88, blue: 0x0066ff }
         },
@@ -104,11 +104,11 @@
         const glass = new THREE.Mesh(new THREE.SphereGeometry(size * 0.65, 24, 24), new THREE.MeshPhysicalMaterial({ color, emissive: color, emissiveIntensity: CONFIG.nodes.glowIntensity, metalness: 0.2, roughness: 0.1, transparent: true, opacity: 0.8, transmission: 0.3, thickness: 0.5, clearcoat: 1, clearcoatRoughness: 0.1 }));
         group.add(glass);
         if (size >= CONFIG.nodes.sizes.large) {
-            const ring = new THREE.Mesh(new THREE.RingGeometry(size * 0.85, size * 1.05, 48), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.5, side: THREE.DoubleSide, blending: THREE.AdditiveBlending }));
+            const ring = new THREE.Mesh(new THREE.RingGeometry(size * 0.85, size * 1.05, 48), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.8, side: THREE.DoubleSide, blending: THREE.AdditiveBlending }));  // Brighter rings
             ring.rotation.x = Math.PI / 2;
             group.add(ring);
         }
-        const glow = new THREE.Mesh(new THREE.SphereGeometry(size * 1.6, 16, 16), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.2, blending: THREE.AdditiveBlending }));
+        const glow = new THREE.Mesh(new THREE.SphereGeometry(size * 1.6, 16, 16), new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.4, blending: THREE.AdditiveBlending }));  // Brighter glow
         group.add(glow);
         group.position.copy(position);
         scene.add(group);
